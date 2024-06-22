@@ -1,0 +1,368 @@
+/* Reset and general styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Libre Baskerville', serif;
+    line-height: 1.6;
+    margin: 0;
+    background: linear-gradient(to right, #ff85a2, #ffbbe7, #c7c3f3);
+    color: #333;
+    animation: backgroundAnimation 80s ease infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+.project-images {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.project-image {
+    max-width: 100%; /* Ensure images don't exceed their original size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff7eb9;
+}
+
+.title {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.title h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    animation: textAnimation 5s ease infinite alternate;
+}
+
+@keyframes textAnimation {
+    0% {
+        color: #ffb6c1;
+    }
+    100% {
+        color: #ff7eb9;
+    }
+}
+
+.title h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #59abe3;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #378ab4;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+    color: #fff; /* Text color */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+footer a:hover {
+    color: #ff7eb9; /* Change color on hover */
+}
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    height: 50px; /* Adjust height as needed */
+}
+
+.scrolling-text {
+    display: inline-block;
+    animation: marqueeAnimation 10s linear infinite alternate; /* Adjust duration as needed */
+}
+
+@keyframes marqueeAnimation {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.scrolling-text span {
+    padding-right: 50px; /* Adjust spacing between text elements */
+    font-weight: bold;
+}
+
+
+.scrolling-text span {
+    display: inline-block;
+    padding-right: 50px;
+    font-weight: bold;
+}
+
+/* About Me Section Layout */
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-gif {
+    flex: 1;
+    text-align: center;
+}
+
+.about-gif img {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    .title h1 {
+        font-size: 28px;
+    }
+
+    .title h2 {
+        font-size: 16px;
+    }
+
+    nav {
+        float: none;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .project-image {
+        width: 100%;
+        max-width: 400px; /* Adjust this value to match the GIF size */
+        height: auto;
+        cursor: pointer;
+    }
+    
+    /* Optional: Center images */
+    .project-images {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+.project-image {
+    width: 100%;
+    max-width: 300px; /* Adjust this value to the desired width */
+    height: auto;
+    cursor: pointer;
+}
+
+/* Optional: Center images */
+.project-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+s
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .marquee {
+        overflow-x: auto;
+    }
+
+    .scrolling-text {
+        animation: none;
+    }
+
+    /* Adjust About Me section for smaller screens */
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-gif {
+        text-align: center;
+    }
+}
+
+#work-experience {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.timeline {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #59abe3;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.timeline-item:hover::before {
+    background-color: #378ab4;
+}
+
+.timeline-item .date {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.timeline-item .job-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.timeline-item .company {
+    font-style: italic;
+    color: #555;
+}
+
+.details {
+    display: none;
+    margin-top: 10px;
+}
+
+.timeline-item:hover .details {
+    display: block;
+}
